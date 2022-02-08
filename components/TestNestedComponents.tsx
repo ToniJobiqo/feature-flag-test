@@ -1,9 +1,14 @@
 import TestDiv from "components/TestDiv"
 import TestScript from "components/TestScript"
 
-export const TestUseComponents = () => {
+interface Props {
+  flagTest: boolean
+}
+
+export const TestUseComponents = ({ flagTest }: Props) => {
   return (
     <div>
+      Flag test = {flagTest}
       <TestDiv />
       Use components feature flag test
       <TestScript />
