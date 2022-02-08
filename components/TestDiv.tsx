@@ -1,12 +1,9 @@
-import getConfig from "next/config"
-
 export const TestDiv = () => {
-  const { publicRuntimeConfig } = getConfig()
-  const fakeFlag = false,
+  const fakeFlag = true,
     fakeFlag1 = true,
-    fakeFlag2 = true
+    fakeFlag2 = false
 
-  return fakeFlag1 && fakeFlag2 && fakeFlag ? <div>Div feature flag test</div> : null
+  return fakeFlag && fakeFlag1 && fakeFlag2 ? <div>Div feature flag test</div> : null
 }
 
 export default TestDiv
